@@ -227,3 +227,15 @@ td:first-child {
         padding: 5px 10px;
     }
 }
+
+.secondaryButton {
+    margin-top: 2vh;
+    padding: 2vh 2vw;
+    font-size: clamp(16px, 2.5vw, 20px);
+}
+
+@media (min-width: 768px) {
+    #enterButton {
+        display: none;
+    }
+}
