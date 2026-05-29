@@ -123,3 +123,20 @@ button:active {
     background: #00ff88;
     color: black;
 }
+footer {
+    position: fixed;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: #00aa66;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer a:hover {
+    color: #00ff88;
+}
