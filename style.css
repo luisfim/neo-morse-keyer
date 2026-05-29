@@ -298,3 +298,34 @@ td:first-child {
 #morseButton {
     touch-action: none;
 }
+
+.history-image {
+
+    margin: 40px auto;
+
+    text-align: center;
+}
+
+.history-image img {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    border: 1px solid #00ff88;
+
+    border-radius: 6px;
+
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.history-image figcaption {
+
+    margin-top: 12px;
+
+    color: #00aa66;
+
+    font-size: 14px;
+
+    font-style: italic;
+}
