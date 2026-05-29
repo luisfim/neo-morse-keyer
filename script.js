@@ -55,11 +55,10 @@ const morseTable = {
 
 const easterEggs = {
     "MORSE": "meta",
-    "SOS": "not so creative",
     "LAURA": "i love you",
     "42": "the answer to everything",
     "69": "nice",
-    "HELLO": "world",
+    "HELLO": "let me guess: hello world",
     "NEO": "follow the white rabbit",
     "LINUX": "BTW i use arch",
     "CQ": "calling all stations",
