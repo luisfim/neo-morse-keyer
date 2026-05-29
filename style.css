@@ -4,7 +4,7 @@ body {
     font-family: Consolas, monospace;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
     text-align: center;
@@ -13,13 +13,14 @@ body {
 .container {
     width: 700px;
     max-width: 90vw;
+    margin-top: 20px;
 }
 
 .logo {
     display: block;
     width: 500px;
     max-width: 90%;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 20px auto;
     filter: drop-shadow(0 0 20px #00ff88);
 }
 
