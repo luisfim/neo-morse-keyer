@@ -1,11 +1,11 @@
 @font-face {
-    font-family: "Morse Coder";
+    font-family: "Loomatic";
     src: url("font.ttf") format("truetype");
 }
 .lore-page h1,
 .lore-page h2 {
 
-    font-family: "Morse Coder", sans-serif;
+    font-family: "Loomatic", sans-serif;
 }
 .lore-page p,
 .lore-page li {
