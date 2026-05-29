@@ -15,7 +15,6 @@ Neo Morse Keyer allows users to generate Morse code through keyboard timing, dec
 * Audio feedback
 * Interactive terminal-style interface
 * Morse history page
-* Future game section
 
 ## Technologies
 
