@@ -13,12 +13,19 @@
     font-family: Arial, sans-serif;
 }
 body {
-    background: #050505;
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
     color: #00ff88;
     font-family: Consolas, monospace;
+
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
     min-height: 100vh;
     margin: 0;
     text-align: center;
