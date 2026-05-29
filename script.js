@@ -7,6 +7,7 @@ const DOT_THRESHOLD = 300;
 
 let startTime = 0;
 let currentMorse = "";
+let currentWord = "";
 let lastEnterTime = 0;
 const DOUBLE_ENTER_TIME = 500;
 
@@ -51,6 +52,12 @@ const morseTable = {
     "----.": "9"
 };
 
+const easterEggs = {
+    "MORSE": "meta",
+    "SOS": "not so creative",
+    "LAURA": "i love you"
+};
+
 function playBeep(duration) {
 
     const oscillator = audioContext.createOscillator();
@@ -69,6 +76,18 @@ function playBeep(duration) {
     setTimeout(() => {
         oscillator.stop();
     }, duration);
+}
+
+function checkEasterEgg() {
+    const secretMessage = easterEggs[currentWord];
+
+    if (secretMessage) {
+        currentMorseElement.textContent = secretMessage;
+
+        setTimeout(() => {
+            currentMorseElement.textContent = "";
+        }, 2500);
+    }
 }
 
 function startPress() {
@@ -113,6 +132,7 @@ function confirmLetter() {
         `;
 
         wordOutput.appendChild(block);
+        currentWord = "";
         lastEnterTime = 0;
         return;
     }
@@ -122,6 +142,7 @@ function confirmLetter() {
     const translated = morseTable[currentMorse];
 
     if (translated) {
+        currentWord += translated;
 
         const block = document.createElement("div");
 
@@ -133,6 +154,7 @@ function confirmLetter() {
         `;
 
         wordOutput.appendChild(block);
+        checkEasterEgg();
 
     } else if (currentMorse !== "") {
 
@@ -179,6 +201,7 @@ document.addEventListener("keydown", (e) => {
         if (last) {
 
             last.remove();
+            currentWord = currentWord.slice(0, -1);
         }
     }
 });
