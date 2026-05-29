@@ -1,33 +1,84 @@
 body {
-    background-color: #111;
-    color: white;
-    font-family: Arial;
+    background: #050505;
+    color: #00ff88;
+    font-family: Consolas, monospace;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    margin: 0;
     text-align: center;
 }
 
 .container {
-    width: 400px;
+    width: 700px;
+    max-width: 90vw;
+}
+
+.logo {
+    display: block;
+    width: 500px;
+    max-width: 90%;
+    margin: 0 auto 40px auto;
+    filter: drop-shadow(0 0 20px #00ff88);
 }
 
 button {
     width: 100%;
-    padding: 20px;
-    font-size: 20px;
+    padding: 25px;
+    font-size: 24px;
+    background: black;
+    color: #00ff88;
+    border: 2px solid #00ff88;
     cursor: pointer;
-    margin-top: 20px;
+    transition: 0.2s;
 }
 
-#morseOutput {
-    margin-top: 30px;
-    font-size: 30px;
+button:hover {
+    background: #00ff88;
+    color: black;
 }
 
-#textOutput {
-    margin-top: 20px;
-    font-size: 40px;
-    color: lime;
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 20px #00ff88;
+}
+
+#currentMorse {
+    font-size: 60px;
+    margin-top: 40px;
+    min-height: 80px;
+    letter-spacing: 10px;
+    text-shadow: 0 0 15px #00ff88;
+}
+
+#wordOutput {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.letterBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.letter {
+    font-size: 50px;
+    text-shadow: 0 0 10px #00ff88;
+}
+
+.miniMorse {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+
+.help {
+    margin-top: 40px;
+    color: #00aa66;
+    font-size: 14px;
 }
