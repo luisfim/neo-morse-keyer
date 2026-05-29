@@ -66,7 +66,9 @@ button {
     color: #00ff88;
 
     border: 2px solid #00ff88;
+
     cursor: pointer;
+
     transition: 0.2s;
 }
 
@@ -76,7 +78,13 @@ button:hover {
 }
 
 button:active {
+
+    background: #00ff88;
+
+    color: black;
+
     transform: scale(0.98);
+
     box-shadow: 0 0 20px #00ff88;
 }
 
