@@ -57,9 +57,9 @@ button:active {
 }
 
 #currentMorse {
-    font-size: 60px;
-    margin-top: 40px;
-    min-height: 80px;
+    font-size: clamp(36px, 8vw, 60px);
+    margin-top: 4vh;
+    min-height: 10vh;
     letter-spacing: 10px;
     text-shadow: 0 0 15px #00ff88;
 }
@@ -79,7 +79,7 @@ button:active {
 }
 
 .letter {
-    font-size: 50px;
+    font-size: clamp(28px, 6vw, 50px);
     text-shadow: 0 0 10px #00ff88;
 }
 
@@ -96,7 +96,7 @@ button:active {
 }
 .side-menu {
     position: fixed;
-    right: 25px;
+    right: 2vw;
     top: 50%;
     transform: translateY(-50%);
 
@@ -194,4 +194,36 @@ td {
 td:first-child {
     font-weight: bold;
     color: #00ff88;
+}
+@media (max-width: 768px) {
+
+    .side-menu {
+
+        position: static;
+
+        transform: none;
+
+        flex-direction: row;
+
+        justify-content: center;
+
+        margin-top: 20px;
+
+        margin-bottom: 20px;
+    }
+
+    .side-menu a {
+
+        padding: 10px 15px;
+    }
+
+    .container {
+
+        width: 95vw;
+    }
+
+    td {
+
+        padding: 5px 10px;
+    }
 }
