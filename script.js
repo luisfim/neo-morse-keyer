@@ -1,4 +1,4 @@
-```javascript
+
 const button = document.getElementById("morseButton");
 const currentMorseElement = document.getElementById("currentMorse");
 const wordOutput = document.getElementById("wordOutput");
@@ -163,4 +163,3 @@ document.addEventListener("keyup", (e) => {
         endPress();
     }
 });
-```
