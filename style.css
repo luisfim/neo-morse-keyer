@@ -183,3 +183,18 @@ pre {
 
     font-family: "Orbitron", sans-serif;
 }
+
+table {
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px 25px;
+    border-bottom: 1px solid #00aa66;
+}
+
+td:first-child {
+    font-weight: bold;
+    color: #00ff88;
+}
