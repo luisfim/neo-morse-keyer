@@ -271,3 +271,7 @@ td:first-child {
         display: none;
     }
 }
+
+#morseButton {
+    touch-action: none;
+}
