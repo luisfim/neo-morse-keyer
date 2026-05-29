@@ -7,6 +7,8 @@ const DOT_THRESHOLD = 300;
 
 let startTime = 0;
 let currentMorse = "";
+let lastEnterTime = 0;
+const DOUBLE_ENTER_TIME = 500;
 
 const audioContext = new(window.AudioContext || window.webkitAudioContext)();
 
@@ -37,6 +39,16 @@ const morseTable = {
     "-..-": "X",
     "-.--": "Y",
     "--..": "Z"
+    "-----": "0",
+    ".----": "1",
+    "..---": "2",
+    "...--": "3",
+    "....-": "4",
+    ".....": "5",
+    "-....": "6",
+    "--...": "7",
+    "---..": "8",
+    "----.": "9"
 };
 
 function playBeep(duration) {
@@ -89,6 +101,23 @@ function endPress() {
 }
 
 function confirmLetter() {
+    const now = Date.now();
+
+    if (now - lastEnterTime < DOUBLE_ENTER_TIME && currentMorse === "") {
+        const block = document.createElement("div");
+        block.className = "letterBlock spaceBlock";
+
+        block.innerHTML = `
+            <div class="letter">&nbsp;</div>
+            <div class="miniMorse">space</div>
+        `;
+
+        wordOutput.appendChild(block);
+        lastEnterTime = 0;
+        return;
+    }
+
+    lastEnterTime = now;
 
     const translated = morseTable[currentMorse];
 
