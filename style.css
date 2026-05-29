@@ -1,10 +1,24 @@
+@font-face {
+    font-family: "Loomatic";
+    src: url("font.ttf") format("truetype");
+}
+.lore-page h1,
+.lore-page h2 {
+
+    font-family: "Loomatic", sans-serif;
+}
+.lore-page p,
+.lore-page li {
+
+    font-family: Arial, sans-serif;
+}
 body {
     background: #050505;
     color: #00ff88;
     font-family: Consolas, monospace;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
     text-align: center;
@@ -13,13 +27,14 @@ body {
 .container {
     width: 700px;
     max-width: 90vw;
+    margin-top: 20px;
 }
 
 .logo {
     display: block;
     width: 500px;
     max-width: 90%;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 20px auto;
     filter: drop-shadow(0 0 20px #00ff88);
 }
 
@@ -81,4 +96,90 @@ button:active {
     margin-top: 40px;
     color: #00aa66;
     font-size: 14px;
+}
+.side-menu {
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-menu a {
+    color: #00ff88;
+    text-decoration: none;
+
+    border: 1px solid #00ff88;
+    padding: 12px 20px;
+
+    background: black;
+
+    transition: 0.2s;
+}
+
+.side-menu a:hover {
+    background: #00ff88;
+    color: black;
+}
+.backLink {
+    display: inline-block;
+    margin-top: 30px;
+    color: #00ff88;
+    text-decoration: none;
+    border: 1px solid #00ff88;
+    padding: 12px 20px;
+}
+
+.backLink:hover {
+    background: #00ff88;
+    color: black;
+}
+footer {
+    position: fixed;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer a {
+    color: #00aa66;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer a:hover {
+    color: #00ff88;
+}
+.container p,
+.container li {
+
+    line-height: 1.7;
+
+    text-align: left;
+}
+
+.container h2 {
+
+    margin-top: 40px;
+
+    color: #00ff88;
+}
+
+pre {
+
+    border: 1px solid #00ff88;
+
+    padding: 15px;
+
+    background: #111;
+
+    color: #00ff88;
+}
+.lore-page {
+
+    font-family: "Orbitron", sans-serif;
 }
