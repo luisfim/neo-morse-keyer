@@ -83,3 +83,30 @@ button:active {
     color: #00aa66;
     font-size: 14px;
 }
+.side-menu {
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side-menu a {
+    color: #00ff88;
+    text-decoration: none;
+
+    border: 1px solid #00ff88;
+    padding: 12px 20px;
+
+    background: black;
+
+    transition: 0.2s;
+}
+
+.side-menu a:hover {
+    background: #00ff88;
+    color: black;
+}
