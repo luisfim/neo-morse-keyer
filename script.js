@@ -56,15 +56,15 @@ const easterEggs = {
     "MORSE": "meta",
     "SOS": "not so creative",
     "LAURA": "i love you",
-    "42": "the answer to everything.",
-    "69": "nice.",
-    "HELLO": "world.",
-    "NEO": "follow the white rabbit.",
-    "LINUX": "BTW i use arch.",
-    "CQ": "calling all stations.",
-    "404": "message not found.",
+    "42": "the answer to everything",
+    "69": "nice",
+    "HELLO": "world",
+    "NEO": "follow the white rabbit",
+    "LINUX": "BTW i use arch",
+    "CQ": "calling all stations",
+    "404": "message not found",
     "9000": "it's over 9000!",
-    "666": "signal corrupted."
+    "666": "signal corrupted"
 };
 
 function playBeep(duration) {
