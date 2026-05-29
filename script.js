@@ -180,13 +180,10 @@ function confirmLetter() {
     currentMorse = "";
 }
 
-button.addEventListener("mousedown", startPress);
+button.addEventListener("pointerdown", startPress);
 
-button.addEventListener("mouseup", endPress);
+button.addEventListener("pointerup", endPress);
 
-button.addEventListener("touchstart", startPress);
-
-button.addEventListener("touchend", endPress);
 
 enterButton.addEventListener("click", confirmLetter);
 
