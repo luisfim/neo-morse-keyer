@@ -13,12 +13,19 @@
     font-family: Arial, sans-serif;
 }
 body {
-    background: #050505;
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
     color: #00ff88;
     font-family: Consolas, monospace;
+
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
     min-height: 100vh;
     margin: 0;
     text-align: center;
@@ -27,7 +34,18 @@ body {
 .container {
     width: 80vw;
     max-width: 700px;
+    min-height: 80vh;
     margin-top: 3vh;
+
+    background: rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(3px);
+
+    border: 1px solid rgba(0, 255, 136, 0.15);
+
+    border-radius: 10px;
+
+    padding: 20px;
 }
 
 .logo {
@@ -35,17 +53,16 @@ body {
     width: 55vw;
     max-width: 500px;
     min-width: 220px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 3vh auto;
     filter: drop-shadow(0 0 20px #00ff88);
 }
 
 button {
     width: 100%;
-    padding: 25px;
-    font-size: 24px;
+    padding: 3vh 2vw;
+    font-size: clamp(18px, 3vw, 24px);
 
-    background: #303030; /* grey */
-
+    background: #303030;
     color: #00ff88;
 
     border: 2px solid #00ff88;
@@ -56,9 +73,7 @@ button {
 }
 
 button:hover {
-
-    background: #005f3a; /* dark green */
-
+    background: #005f3a;
     color: #00ff88;
 }
 
@@ -75,8 +90,8 @@ button:active {
 
 #currentMorse {
     font-size: clamp(36px, 8vw, 60px);
-    margin-top: 40px;
-    min-height: 80px;
+    margin-top: 4vh;
+    min-height: 10vh;
     letter-spacing: 10px;
     text-shadow: 0 0 15px #00ff88;
 }
@@ -96,7 +111,7 @@ button:active {
 }
 
 .letter {
-    font-size: 50px;
+    font-size: clamp(28px, 6vw, 50px);
     text-shadow: 0 0 10px #00ff88;
 }
 
@@ -113,7 +128,7 @@ button:active {
 }
 .side-menu {
     position: fixed;
-    right: 25px;
+    right: 2vw;
     top: 50%;
     transform: translateY(-50%);
 
@@ -211,4 +226,48 @@ td {
 td:first-child {
     font-weight: bold;
     color: #00ff88;
+}
+@media (max-width: 768px) {
+
+    .side-menu {
+
+        position: static;
+
+        transform: none;
+
+        flex-direction: row;
+
+        justify-content: center;
+
+        margin-top: 20px;
+
+        margin-bottom: 20px;
+    }
+
+    .side-menu a {
+
+        padding: 10px 15px;
+    }
+
+    .container {
+
+        width: 95vw;
+    }
+
+    td {
+
+        padding: 5px 10px;
+    }
+}
+
+.secondaryButton {
+    margin-top: 2vh;
+    padding: 2vh 2vw;
+    font-size: clamp(16px, 2.5vw, 20px);
+}
+
+@media (min-width: 768px) {
+    #enterButton {
+        display: none;
+    }
 }
