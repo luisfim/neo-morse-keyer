@@ -1,5 +1,6 @@
 
 const button = document.getElementById("morseButton");
+const enterButton = document.getElementById("enterButton");
 const currentMorseElement = document.getElementById("currentMorse");
 const wordOutput = document.getElementById("wordOutput");
 
@@ -186,6 +187,8 @@ button.addEventListener("mouseup", endPress);
 button.addEventListener("touchstart", startPress);
 
 button.addEventListener("touchend", endPress);
+
+enterButton.addEventListener("click", confirmLetter);
 
 document.addEventListener("keydown", (e) => {
 
