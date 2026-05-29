@@ -62,7 +62,13 @@ button:hover {
 }
 
 button:active {
+
+    background: #00ff88;
+
+    color: black;
+
     transform: scale(0.98);
+
     box-shadow: 0 0 20px #00ff88;
 }
 
