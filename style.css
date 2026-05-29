@@ -25,9 +25,9 @@ body {
 }
 
 .container {
-    width: 700px;
-    max-width: 90vw;
-    margin-top: 20px;
+    width: 80vw;
+    max-width: 700px;
+    margin-top: 3vh;
 }
 
 .logo {
@@ -73,7 +73,7 @@ button:active {
 }
 
 #currentMorse {
-    font-size: 60px;
+    font-size: clamp(36px, 8vw, 60px);
     margin-top: 40px;
     min-height: 80px;
     letter-spacing: 10px;
